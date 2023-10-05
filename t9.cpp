@@ -21,7 +21,8 @@ string timeTravel(int hour, int min)
         time = (hour * 60) + (min + 15);
         int hrr = time / 60;
         int minutes = time % 60;
-        string hours = to_string(hrr);
+        int hr = hrr % 24;
+        string hours = to_string(hr);
         string m = to_string(minutes);
         string result = hours + ":" + m;
         return result;
